@@ -23,4 +23,14 @@ export const backend = {
   // Add dummy methods if needed by components
 };
 
+// Dummy Firebase objects for frontend-only implementation
+export const firebaseAuth = {
+  currentUser: null,
+  signOut: () => Promise.resolve()
+};
+
+export const firebaseApp = {
+  // Add dummy methods if needed
+};
+
 // export * as types from "../brain/data-contracts";
