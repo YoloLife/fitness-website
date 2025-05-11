@@ -2,11 +2,19 @@
  * YOLO Life Firestore Database Structure
  *
  * This file documents the database structure for the YOLO Life wellness application.
+ * This is a frontend-only implementation with no actual database connections.
  */
 
 import { Article, Author, Category, Comment, NewsletterSubscriber, UserProfile } from './models';
 import { db, articlesRef, categoriesRef, authorsRef, usersRef, commentsRef, subscribersRef } from './firestore';
-import { getDocs } from 'firebase/firestore';
+
+// Mock function to replace firebase/firestore getDocs
+const getDocs = async (ref: any) => {
+  return {
+    size: 0,
+    docs: []
+  };
+};
 
 /**
  * Database Structure:
