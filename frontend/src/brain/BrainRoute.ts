@@ -1,17 +1,10 @@
-import { CheckHealthData } from "./data-contracts";
+// This file provides dummy type definitions for the Brain namespace
+// No backend functionality is available in this frontend-only project
 
 export namespace Brain {
-  /**
-   * @description Check health of application. Returns 200 when OK, 500 when not.
-   * @name check_health
-   * @summary Check Health
-   * @request GET:/_healthz
-   */
+  // Simplified health check types for frontend-only implementation
   export namespace check_health {
     export type RequestParams = {};
-    export type RequestQuery = {};
-    export type RequestBody = never;
-    export type RequestHeaders = {};
-    export type ResponseBody = CheckHealthData;
+    export type ResponseBody = { status: string };
   }
 }

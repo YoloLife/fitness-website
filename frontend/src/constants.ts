@@ -14,14 +14,10 @@ export const mode = (import.meta as unknown as WithEnvMode).env.MODE;
 declare const __APP_ID__: string;
 export const APP_ID = __APP_ID__;
 
-declare const __API_PATH__: string;
-export const API_PATH = __API_PATH__;
-
-declare const __API_URL__: string;
-export const API_URL = __API_URL__;
-
-declare const __WS_API_URL__: string;
-export const WS_API_URL = __WS_API_URL__;
+// Frontend-only constants - no backend needed
+export const API_PATH = '';
+export const API_URL = '';
+export const WS_API_URL = '';
 
 declare const __APP_BASE_PATH__: string;
 export const APP_BASE_PATH = __APP_BASE_PATH__;

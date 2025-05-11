@@ -1,18 +1,9 @@
-import { CheckHealthData } from "./data-contracts";
-import { HttpClient, RequestParams } from "./http-client";
+// This file provides a dummy implementation for the Brain class
+// No backend functionality is available in this frontend-only project
 
-export class Brain<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
-  /**
-   * @description Check health of application. Returns 200 when OK, 500 when not.
-   *
-   * @name check_health
-   * @summary Check Health
-   * @request GET:/_healthz
-   */
-  check_health = (params: RequestParams = {}) =>
-    this.request<CheckHealthData, any>({
-      path: `/_healthz`,
-      method: "GET",
-      ...params,
-    });
+export class Brain<SecurityDataType = unknown> {
+  // Dummy method for backwards compatibility
+  check_health = (params = {}) => {
+    return Promise.resolve({ status: "ok" });
+  };
 }
