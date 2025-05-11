@@ -1,31 +1,26 @@
 /*
 This file is here for exporting a stable API for users apps.
 
-Usage examples:
+Usage examples in a frontend-only context:
 
-  // API endpoints can be called via the backend client
-  import { backend, types } from "app";
-  const response: types.EndpointExampleResponseType = await backend.endpoint_example({...})
-
-  // API websocket endpoints are reachable at `${WS_API_URL}/endpointname`
-  import { WS_API_URL } from "app";
-  const socket = new WebSocket(`${WS_API_URL}/endpointname`)
-
-  // API HTTP endpoints are also reachable at `${API_URL}/endpointname`
-  import { API_URL } from "app";
+  // Constants and configuration
+  import { APP_BASE_PATH, APP_ID, Mode, mode } from "app";
 */
 
 export {
-  API_URL,
   APP_BASE_PATH,
   APP_ID,
   Mode,
-  WS_API_URL,
   mode,
 } from "../constants";
-export * from "./auth";
 
-import brain from "../brain";
-export const backend = brain;
+// Define dummy values for previously backend-dependent constants
+export const API_URL = '';
+export const WS_API_URL = '';
+
+// Dummy backend object for frontend-only implementation
+export const backend = {
+  // Add dummy methods if needed by components
+};
 
 // export * as types from "../brain/data-contracts";
