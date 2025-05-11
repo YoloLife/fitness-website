@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -304,6 +304,5 @@
     "vite": "4.4.5",
     "vite-tsconfig-paths": "4.2.2"
   },
-  "packageManager": "yarn@4.0.2",
-  "nodeLinker": "pnpm"
+  "packageManager": "yarn@4.0.2"
 }
