@@ -336,10 +336,10 @@ export default function SelfCareArticlePersonalizedSelfCareRoutine() {
       </ul>
       
       <ContentImage 
-        src="https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
+        src="https://images.unsplash.com/photo-1579017308347-e53e0d2fc5e9"
         alt="Person journaling with a cup of coffee"
         caption="Journaling can help process emotions and build self-awareness as part of a self-care practice"
-        credit="Photo by Hannah Olinger on Unsplash"
+        credit="Photo by Unsplash"
       />
       
       <h3 className="text-xl font-serif font-semibold mt-8 mb-4 text-primary">Extended Self-Care Practices (30+ minutes)</h3>

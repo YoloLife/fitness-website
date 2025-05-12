@@ -88,7 +88,7 @@ export default function SelfCareArticleArtOfSayingNo() {
 
       <ContentImage 
         src="https://images.unsplash.com/photo-1507537362848-9c7e70b7b5c1"
-        alt="Person looking stressed while checking phone messages"
+        alt="Two people in conversation discussing boundaries in an office setting"
         caption="The pressure to always be available can lead to burnout and diminished wellbeing"
         credit="Photo by Unsplash"
       />
@@ -182,7 +182,7 @@ export default function SelfCareArticleArtOfSayingNo() {
 
       <ContentImage 
         src="https://images.unsplash.com/photo-1557321259-edfc29fa4053"
-        alt="Person practicing deep breathing technique"
+        alt="Yellow NO text painted on dark asphalt"
         caption="Taking a moment to check in with yourself before responding to requests can help identify your true priorities"
         credit="Photo by Unsplash"
       />
@@ -336,7 +336,7 @@ export default function SelfCareArticleArtOfSayingNo() {
 
       <ContentImage 
         src="https://images.unsplash.com/vector-1743801055485-05dc13a15295"
-        alt="Person sitting in meditation pose in serene environment"
+        alt="Silhouettes of two people in conversation with gestures"
         caption="Mindfulness practices can help build awareness of when we're saying 'yes' out of habit rather than genuine desire"
         credit="Photo by Unsplash"
       />

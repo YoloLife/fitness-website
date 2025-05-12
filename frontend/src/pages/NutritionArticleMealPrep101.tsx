@@ -162,7 +162,7 @@ export default function NutritionArticleMealPrep101() {
       </div>
 
       <ContentImage 
-        src="https://images.unsplash.com/photo-1580116270858-8a0d62b15426"
+        src="https://images.unsplash.com/photo-1543352632-fea6d4f83e78"
         alt="Healthy meal prep containers with fresh ingredients and balanced portions"
         caption="Organized meal prep containers showcase a week's worth of balanced, nutritious meals"
         credit="Photo by Unsplash"

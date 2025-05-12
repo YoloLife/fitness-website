@@ -176,7 +176,7 @@ export default function EnvironmentalArticleNonToxicHome() {
       </p>
       
       <ContentImage 
-        src="https://images.unsplash.com/photo-1616048056617-93b94a339009?ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
+        src="https://images.unsplash.com/photo-1621318551436-68573392fd5c"
         alt="Glass food storage containers and stainless steel cookware in a kitchen"
         caption="Glass and stainless steel containers offer safer food storage alternatives to plastic"
         credit="Photo by Ella Olsson on Unsplash"
@@ -276,7 +276,7 @@ export default function EnvironmentalArticleNonToxicHome() {
       </ul>
       
       <ContentImage 
-        src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
+        src="https://images.unsplash.com/photo-1564594218151-a67498fb2922"
         alt="Natural personal care products with plants and essential oils"
         caption="Simple, natural ingredients can replace many conventional personal care products"
         credit="Photo by Content Pixie on Unsplash"
@@ -360,7 +360,7 @@ export default function EnvironmentalArticleNonToxicHome() {
       </ol>
       
       <ContentImage 
-        src="https://images.unsplash.com/photo-1591462391941-8069e54e4a05?ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
+        src="https://images.unsplash.com/photo-1632380211596-b96123618ca8"
         alt="Air purifier in living room with houseplants"
         caption="Combining air purifiers with plants creates a multi-layered approach to cleaner indoor air"
         credit="Photo by Giorgio Trovato on Unsplash"

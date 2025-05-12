@@ -92,7 +92,7 @@ export default function LifestyleArticleMorningRituals() {
       <h2 className="text-2xl font-serif font-semibold mt-10 mb-6 text-primary">Building Your Morning Ritual</h2>
 
       <ContentImage 
-        src="https://images.unsplash.com/photo-1506784365847-bbad939e9335"
+        src="https://images.unsplash.com/photo-1552650272-b8a34e21bc4b"
         alt="Person practicing morning meditation in a calm setting"
         caption="Starting the day with mindfulness sets a peaceful tone"
         credit="Photo by Unsplash"

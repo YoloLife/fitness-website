@@ -1,17 +1,17 @@
 import { create } from 'zustand';
-import { 
-  doc, 
-  getDoc, 
-  setDoc, 
-  updateDoc, 
-  arrayUnion, 
-  arrayRemove, 
-  serverTimestamp, 
-  onSnapshot
-} from 'firebase/firestore';
-import { db, usersRef, convertUser } from '../firestore';
 import { UserProfile } from '../models';
-import { firebaseApp, firebaseAuth } from 'app';
+
+// Mock data for frontend-only implementation
+const mockUserProfile: UserProfile = {
+  uid: 'user123',
+  displayName: 'Demo User',
+  email: 'demo@example.com',
+  photoURL: 'https://via.placeholder.com/150',
+  savedArticles: ['article1', 'article2'],
+  interests: ['fitness', 'nutrition'],
+  createdAt: new Date(),
+  lastLogin: new Date()
+};
 
 interface UserState {
   profile: UserProfile | null;
@@ -33,7 +33,7 @@ const useUserStore = create<UserState>((set, get) => ({
   isLoading: false,
   error: null,
 
-  // Fetch user profile
+  // Fetch user profile - mock implementation
   fetchUserProfile: async (userId: string) => {
     if (!userId) {
       set({ profile: null, isLoading: false });
@@ -42,17 +42,12 @@ const useUserStore = create<UserState>((set, get) => ({
     
     set({ isLoading: true, error: null });
     try {
-      const userRef = doc(db, 'users', userId);
-      const userDoc = await getDoc(userRef);
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 300));
       
-      if (!userDoc.exists()) {
-        set({ profile: null, isLoading: false });
-        return null;
-      }
-      
-      const profile = convertUser(userDoc);
-      set({ profile, isLoading: false });
-      return profile;
+      // Return mock user profile
+      set({ profile: mockUserProfile, isLoading: false });
+      return mockUserProfile;
     } catch (error) {
       console.error(`Error fetching user profile for ${userId}:`, error);
       set({ error: error as Error, isLoading: false });
@@ -60,37 +55,17 @@ const useUserStore = create<UserState>((set, get) => ({
     }
   },
 
-  // Create new user profile
+  // Create new user profile - mock implementation
   createUserProfile: async (userId: string, profileData: Partial<UserProfile>) => {
     set({ isLoading: true, error: null });
     try {
-      const userRef = doc(db, 'users', userId);
-      
-      // Get current auth user details
-      const user = firebaseAuth.currentUser;
-      const displayName = user?.displayName || 'Anonymous User';
-      const email = user?.email || '';
-      const photoURL = user?.photoURL || undefined;
-      
-      const newProfile: Omit<UserProfile, 'uid'> = {
-        displayName,
-        email,
-        photoURL,
-        savedArticles: [],
-        interests: [],
-        createdAt: serverTimestamp(),
-        lastLogin: serverTimestamp(),
-        ...profileData
-      };
-      
-      await setDoc(userRef, newProfile);
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 300));
       
       const createdProfile = {
+        ...mockUserProfile,
+        ...profileData,
         uid: userId,
-        ...newProfile,
-        // Convert timestamps to dates
-        createdAt: new Date(),
-        lastLogin: new Date(),
       };
       
       set({ profile: createdProfile as UserProfile, isLoading: false });
@@ -101,22 +76,12 @@ const useUserStore = create<UserState>((set, get) => ({
     }
   },
 
-  // Update user profile
+  // Update user profile - mock implementation
   updateUserProfile: async (userId: string, profileData: Partial<UserProfile>) => {
     set({ isLoading: true, error: null });
     try {
-      const userRef = doc(db, 'users', userId);
-      
-      // Remove uid from the data being updated
-      const { uid, ...dataToUpdate } = profileData;
-      
-      // Add lastLogin timestamp
-      const updates = {
-        ...dataToUpdate,
-        lastLogin: serverTimestamp(),
-      };
-      
-      await updateDoc(userRef, updates);
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 300));
       
       // Update local state
       const currentProfile = get().profile;
@@ -137,14 +102,12 @@ const useUserStore = create<UserState>((set, get) => ({
     }
   },
 
-  // Save an article
+  // Save an article - mock implementation
   saveArticle: async (userId: string, articleId: string) => {
     set({ isLoading: true, error: null });
     try {
-      const userRef = doc(db, 'users', userId);
-      await updateDoc(userRef, {
-        savedArticles: arrayUnion(articleId)
-      });
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 300));
       
       // Update local state
       const currentProfile = get().profile;
@@ -165,14 +128,12 @@ const useUserStore = create<UserState>((set, get) => ({
     }
   },
 
-  // Unsave an article
+  // Unsave an article - mock implementation
   unsaveArticle: async (userId: string, articleId: string) => {
     set({ isLoading: true, error: null });
     try {
-      const userRef = doc(db, 'users', userId);
-      await updateDoc(userRef, {
-        savedArticles: arrayRemove(articleId)
-      });
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 300));
       
       // Update local state
       const currentProfile = get().profile;
@@ -193,12 +154,12 @@ const useUserStore = create<UserState>((set, get) => ({
     }
   },
 
-  // Update user interests
+  // Update user interests - mock implementation
   updateUserInterests: async (userId: string, interests: string[]) => {
     set({ isLoading: true, error: null });
     try {
-      const userRef = doc(db, 'users', userId);
-      await updateDoc(userRef, { interests });
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 300));
       
       // Update local state
       const currentProfile = get().profile;
@@ -218,25 +179,15 @@ const useUserStore = create<UserState>((set, get) => ({
     }
   },
 
-  // Subscribe to user profile for real-time updates
+  // Subscribe to user profile - mock implementation
   subscribeToUserProfile: (userId: string) => {
     if (!userId) return () => {};
     
-    const userRef = doc(db, 'users', userId);
+    // In a frontend-only project, we simply fetch once rather than subscribing
+    get().fetchUserProfile(userId);
     
-    const unsubscribe = onSnapshot(userRef, (doc) => {
-      if (doc.exists()) {
-        const profile = convertUser(doc);
-        set({ profile, isLoading: false });
-      } else {
-        set({ profile: null, isLoading: false });
-      }
-    }, (error) => {
-      console.error(`Error in user profile subscription for ${userId}:`, error);
-      set({ error: error as Error, isLoading: false });
-    });
-    
-    return unsubscribe;
+    // Return dummy unsubscribe function
+    return () => {};
   },
 }));
 

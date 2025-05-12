@@ -36,7 +36,7 @@ export default function EnvironmentalArticleSustainableWellness() {
   const articleMetadata = {
     title: article.title,
     description: article.description,
-    image: article.image,
+    image: "https://images.unsplash.com/photo-1616014954170-b7b04469221c",
     date: new Date(article.date),
     readTime: article.readTime,
     author: article.author,
@@ -53,7 +53,7 @@ export default function EnvironmentalArticleSustainableWellness() {
       </p>
 
       <ContentImage 
-        src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D"
+        src="https://images.unsplash.com/photo-1629380108574-40c083555579"
         alt="Eco-friendly self-care products with natural ingredients"
         caption="Sustainable self-care products made from natural, biodegradable materials"
         credit="Photo by Unsplash"
@@ -146,7 +146,7 @@ export default function EnvironmentalArticleSustainableWellness() {
       </div>
 
       <ContentImage 
-        src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D"
+        src="https://images.unsplash.com/uploads/1412533519888a485b488/bb9f9777"
         alt="Person practicing yoga in a peaceful natural setting"
         caption="Mindful movement practices that connect us with nature"
         credit="Photo by Unsplash"

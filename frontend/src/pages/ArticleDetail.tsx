@@ -71,6 +71,8 @@ export default function ArticleDetailPage({ className = "" }: Props) {
     return <Navigate to="/mental-health-article-building-emotional-resilience" replace />;
   } else if (category === "nutrition" && slug === "intuitive-eating") {
     return <Navigate to="/nutrition-article-intuitive-eating" replace />;
+  } else if (category === "self-care" && slug === "art-of-saying-no") {
+    return <Navigate to="/self-care-article-art-of-saying-no" replace />;
   }
   
   // Get article if category and slug exist

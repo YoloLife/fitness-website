@@ -160,7 +160,7 @@ export default function MentalHealthArticleBuildingEmotionalResilience() {
       </ul>
       
       <ContentImage 
-        src="https://images.unsplash.com/vector-1743801052603-739571d2ac03"
+        src="https://images.unsplash.com/photo-1679077225037-c7e701e2d2e5"
         alt="Person in a yoga pose outdoors"
         caption="Movement practices help build mind-body awareness and calm the nervous system"
         credit="Photo by Unsplash"

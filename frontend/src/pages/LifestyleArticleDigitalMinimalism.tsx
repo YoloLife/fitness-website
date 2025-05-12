@@ -57,10 +57,10 @@ export default function LifestyleArticleDigitalMinimalism() {
       </p>
       
       <ContentImage 
-        src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
+        src="https://images.unsplash.com/photo-1520156557489-31c63271fcd4"
         alt="Person enjoying a book away from technology"
         caption="Digital minimalism emphasizes meaningful offline activities"
-        credit="Photo by Andrew Neel on Unsplash"
+        credit="Photo by Unsplash"
       />
       
       <h2 className="text-2xl font-serif font-semibold mt-10 mb-6 text-primary">What Is Digital Minimalism?</h2>

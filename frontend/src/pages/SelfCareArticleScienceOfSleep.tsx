@@ -191,7 +191,7 @@ export default function SelfCareArticleScienceOfSleep() {
       </div>
       
       <ContentImage 
-        src="https://images.unsplash.com/photo-1664212634541-fbdf9257686e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D"
+        src="https://images.unsplash.com/photo-1581595220921-eec2071e5159"
         alt="Brain activity visualization representing sleep cycles"
         caption="Advanced imaging techniques have revealed the complex brain activity that occurs during different sleep stages"
         credit="Photo from Unsplash"
